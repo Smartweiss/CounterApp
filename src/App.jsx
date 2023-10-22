@@ -1,4 +1,4 @@
-// App.js
+/*// App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link, NavLink, useLocation  } from 'react-router-dom';
 import CustomCounterPage from './pages/CustomCounterPage';
@@ -48,14 +48,14 @@ function App() {
                   <Link to="/my-error-page">Error 404 Page</Link>
                 </li>
               </ul>
-            </nav>*/}
+            </nav>*//*}*/
 
-            <Routes>
+            /*<Routes>
               <Route path="/" element={<CustomCounterPage />} />
               <Route path="/error-boundary" element={<ErrorBoundaryTest />} />
               <Route path="*" element={<NotFound />} />
-              {/* Wildcard route for 404 Not Found */}
-            </Routes>
+              {/* Wildcard route for 404 Not Found *//*}
+            /*</Routes>
         </Router>
           <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-tertiary p-4">
             <h5 style={{width: '100%'}} className="text-center text-white">&copy; CounterApp 2023 | Designed by: Lawal Kabir Adebisi ID ALT/SOP/023/0570</h5>
@@ -65,5 +65,42 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
 
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link, NavLink, useLocation } from 'react-router-dom';
+// ... other imports ...
+
+function App() {
+  const location = useLocation(); // Uncomment this line
+  return (
+    <>
+      <Container>
+        <Router>
+          <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-tertiary p-4">
+            {/* ... other Navbar components ... */}
+            <Nav.Item>
+              <Nav.Link href="/GCounterApp/" className={location.pathname === '/' ? 'active' : ''}>Custom Counter</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="/error-boundary" className={location.pathname === '/error-boundary' ? 'active' : ''}>Error Boundary Test</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="/my-error-page" className={location.pathname === '/my-error-page' ? 'active' : ''}>Error 404 Page</Nav.Link>
+            </Nav.Item>
+            {/* ... other Navbar components ... */}
+          </Navbar>
+
+          {/* ... other Routes components ... */}
+        </Router>
+        <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-tertiary p-4">
+          {/* ... other Navbar components ... */}
+          <h5 style={{ width: '100%' }} className="text-center text-white">&copy; CounterApp 2023 | Designed by: Lawal Kabir Adebisi ID ALT/SOP/023/0570</h5>
+        </Navbar>
+      </Container>
+    </>
+  );
+}
+
+export default App;
