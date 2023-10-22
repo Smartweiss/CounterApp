@@ -18,12 +18,12 @@ function App() {
       <Container>
         <Router>
             <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-tertiary p-4">
-              <Navbar.Brand href="/"><h2>Counter App</h2></Navbar.Brand>
+              <Navbar.Brand href=""><h2>Counter App</h2></Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav variant="underline" className="justify-content-end" style={{width: '100%'}}>
                   <Nav.Item>
-                    <Nav.Link href="/" className={location.pathname === '/' ? 'active' : ''}>Custom Counter</Nav.Link>
+                    <Nav.Link href="/CounterApp/" className={location.pathname === '/' ? 'active' : ''}>Custom Counter</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link href="/error-boundary" className={location.pathname === '/error-boundary' ? 'active' : ''}>Error Boundary Test</Nav.Link>
