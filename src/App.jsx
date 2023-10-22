@@ -43,7 +43,7 @@ function App() {
             </Routes>
         </HashRouter>
           <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-tertiary p-4">
-            <h5 className="text-center text-white">&copy; CounterApp 2023 | Designed by: </h5>
+            <h5 className="text-center text-white">&copy; CounterApp 2023 | Designed by:Lawal Kabir Adebisi ID : ALT/SOE/023/0570 </h5>
           </Navbar>
       </Container>
     </>
